@@ -132,10 +132,14 @@ public class main {
             }
         } //sinais e calculos
         else if(escolha == 2){ 
-            sinais_calculos opção2 = new sinais_calculos();
-            opção2.contas();
-
-              }          
+          //Arquivo de opção número dois//  
+          sinais_calculos opção2 = new sinais_calculos();
+            opção2.contas(); 
+              } else if (escolha == 3){
+                //executar o terceiro arquivo 
+                if_else opção3 = new if_else();
+                opção3.ifelse();
+              } 
               
             }
   entrada.close();
