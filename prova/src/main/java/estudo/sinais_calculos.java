@@ -6,7 +6,7 @@ public class sinais_calculos {
     public void contas(){
             Scanner entrada = new Scanner(System.in);
             boolean sinais = true;
-            //boolean calculo = true;
+            
 
         while(sinais) {
            System.out.print("\033\143");
