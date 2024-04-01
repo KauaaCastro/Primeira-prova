@@ -1,7 +1,6 @@
 package estudo;
 import java.util.Scanner;
 import java.lang.Math;
-import java.lang.String;
 
 public class sinais_calculos {
     public void contas(){
@@ -143,10 +142,9 @@ public class sinais_calculos {
               } 
                 } else if(x == 10){
                         main.main(null); //restart para inicio 
-                    }
-                }
-                entrada.close();
-            }  
+                    } entrada.close();
+                }  
+            }   
              }
              
 

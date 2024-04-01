@@ -1,6 +1,5 @@
 package estudo;
 import java.util.Scanner;
-import java.lang.String;
 
 public class main {
     public static void main(String[] args) {
@@ -8,7 +7,6 @@ public class main {
         boolean start = true;
         boolean variaveis = true;
 
- 
         while(start){
         System.out.print("\033\143");
         System.out.println("");
@@ -131,15 +129,15 @@ public class main {
               } 
             }
         } //sinais e calculos
-        else if(escolha == 2){ 
-          //Arquivo de opção número dois//  
+        else if(escolha == 2){
           sinais_calculos opção2 = new sinais_calculos();
             opção2.contas(); 
-              } else if (escolha == 3){
-                //executar o terceiro arquivo 
+              } 
+              //if e else
+              else if (escolha == 3){ 
                 if_else opção3 = new if_else();
                 opção3.ifelse();
-              } 
+              }
               
             }
   entrada.close();

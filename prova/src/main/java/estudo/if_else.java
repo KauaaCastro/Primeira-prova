@@ -1,6 +1,5 @@
 package estudo;
 import java.util.Scanner;
-import java.lang.String;
 
 public class if_else {
     public void ifelse(){
@@ -16,8 +15,9 @@ public class if_else {
           System.out.println("");
             System.out.println("if(condiçao se e somente se){");System.out.println("insira aqui o comando que deve ser executado caso a condiçao acima seja verdadeira");System.out.println("} else {"); System.out.println("insira aqui o comando que ocorrerá caso a condição do if seja falso");System.out.println("}");
             System.out.println("");
-             System.out.println("Aperte qualquer tecla para continuar"); 
-             char confirmaçao = entrada.next().charAt(0);
+             System.out.println("Digite 'ok' para prosseguirmos"); 
+             @SuppressWarnings("unused")
+            char confirmaçao = entrada.next().charAt(0);
              
              System.out.print("\033\143");
              System.out.println("");    
@@ -45,12 +45,14 @@ public class if_else {
                         if(numb < 10){
                             System.out.println("");
                             System.out.println("Você digitou um número menor que 10 e o número digitado por você foi: " + numb);
-                            System.out.println("Aperte qualquer tecla para poder continuar");
+                            System.out.println("Digite 'ok' ou pressione qualquer digito e letra para prosseguirmos");
+                           @SuppressWarnings("unused")
                             char confirmação = entrada.next().charAt(0); 
                             restart = true;
                             } else {
                             System.out.println("Você digitou um número maior que 10 e o número digitado por você foi: " + numb);
-                            System.out.println("Aperte qualquer tecla para poder continuar");
+                            System.out.println("Digite 'ok' ou pressione qualquer digito e letra para prosseguirmos");
+                           @SuppressWarnings("unused")
                             char confirmação = entrada.next().charAt(0);
                             restart = true; 
                 }} else if(y == 2){
@@ -62,17 +64,20 @@ public class if_else {
                     System.out.println("Os números escolhidos foram: " + numb1 + ", " + numb2 + ", " + numb3 + " e a soma entre eles é: " + calc);
                         if(calc < 50){
                             System.out.println("O resultado da soma entre os três números é menor que 50");
-                            System.out.println("Aperte qualquer tecla para poder continuar");
+                            System.out.println("Digite 'ok' ou pressione qualquer digito e letra para prosseguirmos");
+                           @SuppressWarnings("unused")
                             char confirmação = entrada.next().charAt(0); 
                             restart = true;
                         } else if(calc == 50){
                             System.out.println("A soma dos três algarismo é igual a 50");
-                            System.out.println("Aperte qualquer tecla para poder continuar");
+                            System.out.println("Digite 'ok' ou pressione qualquer digito e letra para prosseguirmos");
+                           @SuppressWarnings("unused")
                             char confirmação = entrada.next().charAt(0); 
                             restart = true;
                         } else{
                             System.out.println("A soma dos três números sao maiores que 50.");
-                            System.out.println("Aperte qualquer tecla para poder continuar");
+                            System.out.println("Digite 'ok' ou pressione qualquer digito e letra para prosseguirmos");
+                           @SuppressWarnings("unused")
                             char confirmação = entrada.next().charAt(0); 
                             restart = true;
                         }
@@ -80,13 +85,16 @@ public class if_else {
                     System.out.print("\033\143");
                     System.out.println("");
                     System.out.println("Retornando a tela inicial, aperte qualquer tecla para confirmar.");
+                   @SuppressWarnings("unused")
                     char confirmação = entrada.next().charAt(0);
                     main.main(null);
         } else{ //final
-            System.out.println("Aperte qualquer tecla para continuar");
+            System.out.println("Digite 'ok' para prosseguirmos");
+           @SuppressWarnings("unused")
             char confirmação = entrada.next().charAt(0);
             main.main(null);
           }
         }
-    } }
+    }entrada.close(); 
+  } 
 }
