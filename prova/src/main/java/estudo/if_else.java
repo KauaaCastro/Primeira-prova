@@ -2,6 +2,9 @@ package estudo;
 import java.util.Scanner;
 
 public class if_else {
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_RESET = "\u001B[0m";
+    
     public void ifelse(){
         Scanner entrada = new Scanner(System.in);
         boolean restart = true;
@@ -12,9 +15,9 @@ public class if_else {
             System.out.println("O if e else funcionam de forma bastante simples, sendo usadas como condicionais estáticas, basicamente uma condicional que nao vária, ela analisa os comandos e dados acima e compara com a condiçao colocada pelo programador dentro de sua fórmula");
             System.out.println("Dito isso, vamos para as fórmulas e e quando e como utilizaremos elas, a primeira fórmula que deixarei aqui é justamente a fórmula padrao do if e do else");
           
-          System.out.println("");
+          System.out.println(ANSI_GREEN + "");
             System.out.println("if(condiçao se e somente se){");System.out.println("insira aqui o comando que deve ser executado caso a condiçao acima seja verdadeira");System.out.println("} else {"); System.out.println("insira aqui o comando que ocorrerá caso a condição do if seja falso");System.out.println("}");
-            System.out.println("");
+            System.out.println(ANSI_RESET + "");
              System.out.println("Digite 'ok' para prosseguirmos"); 
              @SuppressWarnings("unused")
             char confirmaçao = entrada.next().charAt(0);
@@ -23,9 +26,9 @@ public class if_else {
              System.out.println("");    
           System.out.println("O segundo exemplo de como podemos utilizar esse código é utilizando o 'else if' adicionando assim novas opçoes de condicionais, onde se a primeira condicional nao for verdadeira, ele partirá para a segunda condicional, que se por sua vez for falso, ele partirá para a proxima e assim por diante até que chegue no ultimo else, ou que encontre um 'else if' que torne a variavel verdadeira.");
           System.out.println("vale ressaltar aqui, que esse comando funciona de forma um pouco diferente, isso porque o If que inicia a condicional será diretamente ligado ao ultimo 'ELSE', o último else NAO TERÁ IF:");
-          System.out.println("");
+          System.out.println(ANSI_GREEN + "");
           System.out.println("if(condiçao se e somente se){");System.out.println("insira aqui o comando que deve ser executado caso a condiçao acima seja verdadeira");System.out.println("} else if(Adicione aqui a segunda condicional) {"); System.out.println("insira aqui o comando que ocorrerá caso a condição do else if seja verdadeiro");System.out.println("} else {"); System.out.println("digite aqui o que será executado caso os else if sejam falsos e o else seja verdadeiro"); System.out.println("}");
-          System.out.println("");
+          System.out.println("" + ANSI_RESET);
           System.out.println("Deseja ver alguns exemplos de comandos utilizando if e else? (s/n)");
           String x = entrada.next();
   
@@ -36,8 +39,7 @@ public class if_else {
             System.out.println("1 - Exemplo com duas ocasioes");
             System.out.println("2 - Exemplo com três ocasioes e condiçoes");
             System.out.println("3 - Voltar para a tela de inicio");
-            int y = entrada.nextInt(); 
-              
+            int y = entrada.nextInt();             
                    if(y == 1){
                     System.out.println("");
                     System.out.println("digite aqui o número, se o número for maior que 10 o terminal dirá se é ou nao (nao será considerado igualdade, portanto 10 nao será igual a 10)");
@@ -88,12 +90,11 @@ public class if_else {
                    @SuppressWarnings("unused")
                     char confirmação = entrada.next().charAt(0);
                     main.main(null);
-        } else{ //final
+                }           
+        } else if(x.equalsIgnoreCase("n")){ //final
             System.out.println("Digite 'ok' para prosseguirmos");
-           @SuppressWarnings("unused")
             char confirmação = entrada.next().charAt(0);
             main.main(null);
-          }
         }
     }entrada.close(); 
   } 

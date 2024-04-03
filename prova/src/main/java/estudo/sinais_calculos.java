@@ -6,7 +6,6 @@ public class sinais_calculos {
     public void contas(){
             Scanner entrada = new Scanner(System.in);
             boolean sinais = true;
-            
 
         while(sinais) {
            System.out.print("\033\143");
@@ -25,7 +24,7 @@ public class sinais_calculos {
 
                 System.out.println("");
                 System.out.println("Aqui temos a adiçao e a subtraçao que acredito eu que seja obvio o que ela faça, justamente subtrair e somar");
-                System.out.println("Aqui no caso temos que a adição é representada por ++ Enquanto o comando de subtração é representado por --");
+                System.out.println("Aqui no caso temos que a adiçao é representada por ++ Enquanto o comando de subtração é representado por --");
                 System.out.println("Normalmente usamos o ++ ou -- para podermos manter ou acrescentar um algarimso na repitiçao ou no while, como por exemplo caso a condiçao de uma while seja x ser menor que 1, a repertiçao jamais irá parar, afinal, se x é de fato menor que 1, sempre será assim, porem o ++ muda justamente isso, porque a cada coisa ele não assume como verdadeiro ou falso direto e sim buscar comprender e achar os propósito pelos quais isso aconteceu");
                 System.out.println("");
                 System.out.println("deseja continuar?");

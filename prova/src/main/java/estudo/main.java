@@ -3,15 +3,14 @@ import java.util.Scanner;
 
 public class main {
     public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
+      Scanner entrada = new Scanner(System.in);
         boolean start = true;
         boolean variaveis = true;
 
         while(start){
         System.out.print("\033\143");
-        System.out.println("");
         System.out.println("Olá, aqui eu resolvi fazer um breve resumo para ajudar na prova do primeiro semestre, aqui eu irei fazer um resumo simples de cada matéria utilizando um código funcional e um código fonte no GitHub");
-        System.out.println("Escolha aqui qual matéria você deseja revisar");
+        System.out.println("Escolha aqui qual matéria você deseja revisar" );
         System.out.println("");
         
         System.out.println("1- Váriaveis");
@@ -137,8 +136,10 @@ public class main {
               else if (escolha == 3){ 
                 if_else opção3 = new if_else();
                 opção3.ifelse();
+              } else if(escolha == 4){
+                whiletest opção4 = new whiletest();
+               opção4.voidwhile(args);            
               }
-              
             }
   entrada.close();
         }
