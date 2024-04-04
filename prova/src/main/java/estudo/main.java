@@ -2,8 +2,12 @@ package estudo;
 import java.util.Scanner;
 
 public class main {
-    public static void main(String[] args) {
-      Scanner entrada = new Scanner(System.in);
+  public static final String ANSI_GREEN = "\u001B[32m";
+  public static final String ANSI_RESET = "\u001B[0m";
+  public static final String ANSI_BLUE = "\u001B[34m";
+  public static final String ANSI_RED = "\u001B[31m";
+  public static void main(String[] args) {  
+        Scanner entrada = new Scanner(System.in);
         boolean start = true;
         boolean variaveis = true;
 
@@ -40,8 +44,9 @@ public class main {
             //variaveis
              if(variavel == 1){
                 System.out.println("");
+                System.out.println( ANSI_BLUE + "1-) Int " + ANSI_RESET);                
                 System.out.println("O comando Int é bem simples de ser compreendido, isso porque o comando int se trata de uma variavel que serve para declarar e armazenar números inteiros no código");
-                System.out.println("Exemplos: 1,2,3,4,5,6,7, -1, -2, -3, -4, ...");
+                System.out.println("Exemplos:" +  ANSI_GREEN + " 1,2,3,4,5,6,7, -1, -2, -3, -4, ..." + ANSI_RESET);
                 System.out.println("Sua estrutura é simples, ele vem antes do nome da variavel, que por sua vez vem antes das igualdades");
                 System.out.println("Escreva aqui um valor inteiro");
                 int x = entrada.nextInt();
@@ -57,20 +62,21 @@ public class main {
                 System.out.println("Deseja escolher alguma nova variavel? (s/n)");
                  String y = entrada.next();
                  if(y.equalsIgnoreCase ("s")){
-                    System.out.println("reiniciando o programa. aguarde...");
+                    System.out.println(ANSI_RED + "reiniciando o programa. aguarde...");
                     System.out.println("");
                   } else {
-                    System.out.println("Encerrando o programa.");
-                    break;
+                    System.out.println("Encerrando o programa." + ANSI_RESET);
+                    break; 
                  }
              } else if(variavel == 2){  
-              System.out.println("");
+              System.out.println(ANSI_BLUE+ "");
+              System.out.println("2-) Double" + ANSI_RESET);
               System.out.println("Aqui falaremos sobre o Double, se trata de uma variavel que armazena números inteiros e decimais");
               System.out.println("exemplo de números a serem armazenados no double: 1,5; 2,3; 4,6; 7,68; 10,43...");
               System.out.println("escreva aqui um número decimal (ex: 5,23)");
               double x = entrada.nextDouble();
               System.out.println("");
-              System.out.println("Double x = scanner.nextDouble();");
+              System.out.println(ANSI_GREEN + "Double x = scanner.nextDouble();" + ANSI_RESET);
               System.out.println("Aqui para utilizarmos scanner é preciso utilizar o nextDouble()");
               System.out.println("Aqui está o numero que você armazenou " + x + " numero que você escolheu somado a 1,5 = " + (x + 1.5));
               System.out.println("");
@@ -80,16 +86,17 @@ public class main {
               System.out.println("Deseja escolher alguma nova variavel? (s/n)");
                String y = entrada.next();
                if(y.equalsIgnoreCase ("s")){
-                  System.out.println("reiniciando o programa. aguarde...");
+                  System.out.println(ANSI_RED+ "reiniciando o programa. aguarde...");
                   System.out.println("");
                 } else {
-                  System.out.println("Encerrando o programa.");
+                  System.out.println("Encerrando o programa." + ANSI_RESET);
                   break;
                }
              } else if(variavel == 3){
                 System.out.println("");
+                System.out.println( ANSI_BLUE + "3-) Char " + ANSI_RESET);
                 System.out.println("Char é a variavel mais simples entre todas, ela serve basicamente para armazenar um unico algarismo, seja ele númerico ou alfabetico");
-                System.out.println("exemplo: A, B, C, D, 3, 5, 1...");
+                System.out.println("exemplo:" + ANSI_GREEN + " A, B, C, D, 3, 5, 1..." + ANSI_RESET);
                 System.out.println("Um exemplo de uso é justamente para código como códigos binários ou confirmaçoes de algum comando");
                 System.out.println("nao colocarei nenhum exemplo aqui, pois esse comando é algo até que bem especifico que usamos em while ou for geralmente, mas ainda sim pode ser substituido por outras variaveis");
                 
@@ -97,22 +104,23 @@ public class main {
               System.out.println("Deseja escolher alguma nova variavel? (s/n)");
               String y = entrada.next();
               if(y.equalsIgnoreCase ("s")){
-                 System.out.println("reiniciando o programa. aguarde...");
+                 System.out.println(ANSI_GREEN + "reiniciando o programa. aguarde...");
                  System.out.println("");
                } else {
-                 System.out.println("Encerrando o programa.");
+                 System.out.println("Encerrando o programa." + ANSI_RESET);
                  break;
               }
    
              } else if(variavel == 4){
                 System.out.println("");
+                System.out.println(ANSI_BLUE + "4-) String" + ANSI_RESET);
                 System.out.println("Por ultimo, mas não menos importante temos o comando String, comando este que serve para declarar variaveis utilizando frases e textos, é nele que armazenamos palavras e frases");
-                System.out.println("exemplos: a, e, i, o, u, kaua, teste, unitau, linguagem digital...");
+                System.out.println("exemplos:" + ANSI_GREEN + " a, e, i, o, u, kaua, teste, unitau, linguagem digital..." + ANSI_RESET);
                 System.out.println("Escreva aqui uma letra ou palavra:");
                String x = entrada.next();
 
                 System.out.println("");
-                System.out.println("String x = entrada.next()");
+                System.out.println(ANSI_GREEN + "String x = entrada.next()" + ANSI_RESET);
                 System.out.println("acima está a formula utilizada para armazenar a String, aqui está a palavra/letra escolhida por você: " + x);
                 System.out.println("OBS: esse comando também salva e armazena frases e textos, porém para rodarmos isso precisamos de alguns outros comandos como nextline e outros...");
              
@@ -137,13 +145,11 @@ public class main {
                 if_else opção3 = new if_else();
                 opção3.ifelse();
               } else if(escolha == 4){
-                whiletest opção4 = new whiletest();
-               opção4.voidwhile(args);            
+                whiletest.voidwhile(args);            
               }
-            }
-  entrada.close();
-        }
+           } entrada.close();
+      }  
        
-      } 
+    }
 
   

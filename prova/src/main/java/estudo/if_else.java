@@ -4,12 +4,15 @@ import java.util.Scanner;
 public class if_else {
     public static final String ANSI_GREEN = "\u001B[32m";
     public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_RED = "\u001B[31m";
     
     public void ifelse(){
         Scanner entrada = new Scanner(System.in);
         boolean restart = true;
 
         System.out.print("\033\143");
+        System.out.println(ANSI_BLUE + "If e Else" + ANSI_RESET);
             System.out.println("Aqui falaremos sobre um dos códigos mais importantes e mais utilizáveis ao menos na minha opiniao, isso porque utilizando if e else podemos realizar inúmeros comandos e até mesmo substituir alguns outros comandos como while e for (apenas em algumas ocasioes especificas)");
             System.out.println("O comando if e else funciona com algumas regras e estruturas de forma bastante simples, isso porque usamos basicamente a mesma fórmula para praticamente todos os códigos que utilizam if e else");
             System.out.println("O if e else funcionam de forma bastante simples, sendo usadas como condicionais estáticas, basicamente uma condicional que nao vária, ela analisa os comandos e dados acima e compara com a condiçao colocada pelo programador dentro de sua fórmula");
@@ -38,7 +41,7 @@ public class if_else {
             System.out.println("");
             System.out.println("1 - Exemplo com duas ocasioes");
             System.out.println("2 - Exemplo com três ocasioes e condiçoes");
-            System.out.println("3 - Voltar para a tela de inicio");
+            System.out.println( ANSI_RED + "3 - Voltar para a tela de inicio" + ANSI_RESET);
             int y = entrada.nextInt();             
                    if(y == 1){
                     System.out.println("");
@@ -46,14 +49,14 @@ public class if_else {
                     int numb = entrada.nextInt();
                         if(numb < 10){
                             System.out.println("");
-                            System.out.println("Você digitou um número menor que 10 e o número digitado por você foi: " + numb);
-                            System.out.println("Digite 'ok' ou pressione qualquer digito e letra para prosseguirmos");
+                            System.out.println(ANSI_GREEN + "Você digitou um número menor que 10 e o número digitado por você foi: " + numb);
+                            System.out.println(ANSI_RESET + "Digite 'ok' ou pressione qualquer digito e letra para prosseguirmos");
                            @SuppressWarnings("unused")
                             char confirmação = entrada.next().charAt(0); 
                             restart = true;
                             } else {
-                            System.out.println("Você digitou um número maior que 10 e o número digitado por você foi: " + numb);
-                            System.out.println("Digite 'ok' ou pressione qualquer digito e letra para prosseguirmos");
+                            System.out.println(ANSI_GREEN + "Você digitou um número maior que 10 e o número digitado por você foi: " + numb);
+                            System.out.println(ANSI_RESET + "Digite 'ok' ou pressione qualquer digito e letra para prosseguirmos");
                            @SuppressWarnings("unused")
                             char confirmação = entrada.next().charAt(0);
                             restart = true; 
@@ -62,22 +65,22 @@ public class if_else {
                     System.out.println("Esse será um comando simples de cálculo entre três números, escolha três números para que possamos verificar se a soma deles é maior, menos ou igual que 50.");
                     System.out.println("Digite aqui os três números que deseja usar para realizar o cálculo:");
                     int numb1 = entrada.nextInt(); int numb2 = entrada.nextInt(); int numb3 = entrada.nextInt(); int calc = numb1 + numb2 + numb3;
-                    System.out.println("");
-                    System.out.println("Os números escolhidos foram: " + numb1 + ", " + numb2 + ", " + numb3 + " e a soma entre eles é: " + calc);
+                    System.out.println("" + ANSI_GREEN);
+                    System.out.println("Os números escolhidos foram: " + numb1 + ", " + numb2 + ", " + numb3 + " e a soma entre eles é: " + calc + ANSI_RESET);
                         if(calc < 50){
-                            System.out.println("O resultado da soma entre os três números é menor que 50");
+                            System.out.println(ANSI_GREEN + "O resultado da soma entre os três números é menor que 50" + ANSI_RESET);
                             System.out.println("Digite 'ok' ou pressione qualquer digito e letra para prosseguirmos");
                            @SuppressWarnings("unused")
                             char confirmação = entrada.next().charAt(0); 
                             restart = true;
                         } else if(calc == 50){
-                            System.out.println("A soma dos três algarismo é igual a 50");
+                            System.out.println(ANSI_GREEN + "A soma dos três algarismo é igual a 50" + ANSI_RESET );
                             System.out.println("Digite 'ok' ou pressione qualquer digito e letra para prosseguirmos");
                            @SuppressWarnings("unused")
                             char confirmação = entrada.next().charAt(0); 
                             restart = true;
                         } else{
-                            System.out.println("A soma dos três números sao maiores que 50.");
+                            System.out.println(ANSI_GREEN + "A soma dos três números sao maiores que 50." + ANSI_RESET);
                             System.out.println("Digite 'ok' ou pressione qualquer digito e letra para prosseguirmos");
                            @SuppressWarnings("unused")
                             char confirmação = entrada.next().charAt(0); 
@@ -85,14 +88,15 @@ public class if_else {
                         }
                 } else if(y == 3){
                     System.out.print("\033\143");
-                    System.out.println("");
-                    System.out.println("Retornando a tela inicial, aperte qualquer tecla para confirmar.");
+                    System.out.println(ANSI_RED + "");
+                    System.out.println("Retornando a tela inicial, aperte qualquer tecla para confirmar." + ANSI_RESET);
                    @SuppressWarnings("unused")
                     char confirmação = entrada.next().charAt(0);
                     main.main(null);
                 }           
         } else if(x.equalsIgnoreCase("n")){ //final
-            System.out.println("Digite 'ok' para prosseguirmos");
+            System.out.println(ANSI_RED + "Digite 'ok' para prosseguirmos" + ANSI_RESET);
+            @SuppressWarnings("unused")
             char confirmação = entrada.next().charAt(0);
             main.main(null);
         }

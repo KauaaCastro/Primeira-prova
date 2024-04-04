@@ -2,6 +2,10 @@ package estudo;
 import java.util.Scanner;
 
 public class whiletest {
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_RED = "\u001B[31m";
     public static void voidwhile(String [] args){
         Scanner entrada = new Scanner(System.in);
         boolean restart = true;
@@ -25,12 +29,12 @@ public class whiletest {
             System.out.println("1 - While");
             System.out.println("2 - boolean");
             System.out.println("3 - Break");
-            System.out.println("4 - Voltar para a tela de inicio");
+            System.out.println(ANSI_RED + "4 - Voltar para a tela de inicio" + ANSI_RESET);
             int escolha = entrada.nextInt(); 
 
             if (escolha == 1){
                 System.out.print(limpar);
-                System.out.println("1-) While");
+                System.out.println(ANSI_BLUE + "1-) While" + ANSI_RESET);
                 System.out.println("");
                 System.out.println("O comando While geralmente é usado para que possamos criar loopings, repetiçoes, retornar a partes especificas do code");
                 System.out.println("Uma boa forma de aprender e utiliza-lo é para criar repetiçoes em códigos básicos, automatizando um simples código.");
@@ -56,7 +60,7 @@ public class whiletest {
             }
             if(escolha == 2 || condição1 == true){
                 System.out.println(limpar);
-                System.out.println("2-) Boolean");
+                System.out.println(ANSI_BLUE + "2-) Boolean"+ ANSI_RESET);
                 System.out.println("O comando boolean se trata na verdade de uma Variavel e não de um comando própriamente dito, portanto é necessario declará-lo para que possamos executar alguns comandos while");
                 System.out.println("A diferença dele é que ele é uma variavel que pode ser alterada, uma variavel lógica, ela pode ser tanto true quanto false");
                 System.out.println("desta forma ela pode ser alterada com variaveis e loopings, se x < 5 boolean y = false; nesse caso temos um exemplo em que podemos");
@@ -64,7 +68,7 @@ public class whiletest {
                 System.out.println("Podendo substituir o comando break em alguns momentos e sendo extremamente versátil em diversos códigos e comandos, é chamado de váriavel lógica justamente por poder ser alterada por uma lógica");
                 System.out.println("Podemos declara-lá de duas formas distintas, considerando-as como falsa ou como verdadeiras:");
                 System.out.println("");
-                System.out.println("boolean (nome da sua variavel aqui) = true;  ou  boolean (nome da sua váriavel aqui) = false;");
+                System.out.println(ANSI_GREEN + "boolean (nome da sua variavel aqui) = true;  ou  boolean (nome da sua váriavel aqui) = false;" + ANSI_RESET);
                 System.out.println("");
                 System.out.println("Após isso podemos alterar o valor de boolean conforme o que desejamos e a qualquer momento durante o code, citarei alguns exemplos a diante, essa tela voltará a ser exibida após a exibiçao de todos os exemplos");
                 System.out.println("");
@@ -72,16 +76,16 @@ public class whiletest {
                 @SuppressWarnings("unused")
                 char digito = entrada.next().charAt(0);
                 //exemplos
-                System.out.println(limpar);
+                System.out.println(limpar + ANSI_GREEN);
                 System.out.println("boolean temCafe = true;"); System.out.println("boolean temLeite = false;"); System.out.println("if (temCafe && temLeite){"); System.out.println("Pode servir café com leite!"); System.out.println("} else {"); System.out.println("System.out.println('Falta café, leite ou ambos!')"); System.out.println("}"); 
-                System.out.println("");
+                System.out.println(ANSI_RESET + "");
                 System.out.println("Este é um exemplo do uso da variavel boolean, onde declaramos boolean para dizer se possui ou nao café e leite e a partir disso poderiamos fazer diversos if e else, o mesmo se aplica com exemplos em while, observe");
                 System.out.println("Digite qualquer coisa para prosseguirmos");
                     @SuppressWarnings("unused")
                     char Digito = entrada.next().charAt(0); 
-                    System.out.println("");
+                    System.out.println( ANSI_GREEN + "");
                 System.out.println("int contador = 10;"); System.out.println("boolean continuarContagem = true;"); System.out.println("while (continuarContagem) {"); System.out.println("    System.out.println(contador);"); System.out.println("    contador--;"); System.out.println("    if (contador < 0) {"); System.out.println("        continuarContagem = false;"); System.out.println("    }"); System.out.println("}"); System.out.println("System.out.println(\"Contagem regressiva concluída!\");"); System.out.println("}");
-                System.out.println("");
+                System.out.println(ANSI_RESET + "");
                 System.out.println("Deseja prosseguir para a próxima página? (s/n)");
                 String next2 = entrada.next();
                      if (next2.equalsIgnoreCase("s")){
@@ -92,23 +96,24 @@ public class whiletest {
 
             } if (escolha == 3 || condição2 == true){
                 System.out.println(limpar);
-                System.out.println("3-) Break;");
+                System.out.println(ANSI_BLUE + "3-) Break;" + ANSI_RESET);
                 System.out.println("Dentro de um loop: Quando o comando break é encontrado dentro de um loop (for, while ou do-while), ele interrompe imediatamente a execuçao do loop e o controle do programa passa para a próxima instruçao após o loop.");
                 System.out.println("Dentro de um switch statement: Quando o comando break é encontrado dentro de um switch, ele interrompe a execuçao do switch e o controle do programa passa para a próxima instruçao após o switch. Sem o break, a execuçao do código continuaria para o próximo case, potencialmente executando mais de um case até encontrar um break ou até o final do switch.");
-                System.out.println(""); System.out.println("int contador = 0"); System.out.println("while (true) {");System.out.println("System.out.println(Contador: + contador)");System.out.println("    contador++");System.out.println("");System.out.println("    if (contador == 10) {");System.out.println("        break");System.out.println("    }");System.out.println("}");System.out.println("System.out.println(Loop concluído!)");System.out.println("}"); System.out.println("");
-                System.out.println(""); 
+                System.out.println(ANSI_GREEN + ""); System.out.println("int contador = 0"); System.out.println("while (true) {");System.out.println("System.out.println(Contador: + contador)");System.out.println("    contador++");System.out.println("");System.out.println("    if (contador == 10) {");System.out.println("        break");System.out.println("    }");System.out.println("}");System.out.println("System.out.println(Loop concluído!)");System.out.println("}"); System.out.println("");
+                System.out.println(""+ ANSI_RESET); 
                 System.out.println("Este foi um exemplo de código utilizando o comando while e aqui está um exemplo utilizando o switch case: ");
                 System.out.println("dê ok para o próximo exemplo");
                 @SuppressWarnings("unused") char digitoss = entrada.next().charAt(0);
-                System.out.println("");
+                System.out.println(ANSI_GREEN + "");
                 System.out.println("        int opcao = 2;");  System.out.println("        switch (opcao) {"); System.out.println("            case 1:"); System.out.println("                System.out.println(\"Opção 1 selecionada.\");"); System.out.println("                break;"); System.out.println("            case 2:"); System.out.println("                System.out.println(\"Opção 2 selecionada.\");"); System.out.println("                break;"); System.out.println("            case 3:"); System.out.println("                System.out.println(\"Opção 3 selecionada.\");"); System.out.println("                break;"); System.out.println("            default:"); System.out.println("                System.out.println(\"Opção inválida.\");"); System.out.println("                break;"); System.out.println("        }");
-                System.out.println("Para prosseguir clique em qualquer tecla: ");
+                System.out.println( ANSI_RESET + "");
+                System.out.println( "Para prosseguir clique em qualquer tecla: ");
                     @SuppressWarnings("unused")
                     char DIgito = entrada.next().charAt(0);
                 restart = true;
             } 
              if (escolha < 1 || escolha >= 5 ){
-                System.out.println("Item inexistente na lista, favor colocar um número presente na lista acima.");
+                System.out.println(ANSI_RED + "Item inexistente na lista, favor colocar um número presente na lista acima." + ANSI_RESET);
                 System.out.println("Pressione qualquer letra/número para que possamos continuar");
                 @SuppressWarnings("unused")
                 char lista1 = entrada.next().charAt(0);
