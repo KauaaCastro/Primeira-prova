@@ -92,13 +92,13 @@ public class if_else {
                     System.out.println("Retornando a tela inicial, aperte qualquer tecla para confirmar." + ANSI_RESET);
                    @SuppressWarnings("unused")
                     char confirmação = entrada.next().charAt(0);
-                    main.main(null);
+                    Main.main(null);
                 }           
         } else if(x.equalsIgnoreCase("n")){ //final
             System.out.println(ANSI_RED + "Digite 'ok' para prosseguirmos" + ANSI_RESET);
             @SuppressWarnings("unused")
             char confirmação = entrada.next().charAt(0);
-            main.main(null);
+            Main.main(null);
         }
     }entrada.close(); 
   } 

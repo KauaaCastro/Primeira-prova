@@ -10,8 +10,6 @@ public class whiletest {
         Scanner entrada = new Scanner(System.in);
         boolean restart = true;
         String limpar = "\033\143";
-        boolean condição1 = false;
-        boolean condição2 = false;
         
         System.out.print("\033\143");
         System.out.println("Aqui falaremos sobre o comando 'while' comando esse que serve para criar loopings, repetições, cálculos mais complexos e redirecionamentos.");
@@ -23,16 +21,25 @@ public class whiletest {
         System.out.println("Dito tudo isso, deseja prosseguir para a lista com os comando essenciais para o while? (s/n)");
         String list = entrada.nextLine();
 
-        while(restart){
-        if (list.equalsIgnoreCase("s")){
-          System.out.print(limpar);
-            System.out.println("1 - While");
-            System.out.println("2 - boolean");
-            System.out.println("3 - Break");
-            System.out.println(ANSI_RED + "4 - Voltar para a tela de inicio" + ANSI_RESET);
-            int escolha = entrada.nextInt(); 
-
-            if (escolha == 1){
+        while (restart){
+            if (list.equalsIgnoreCase("s")){
+                System.out.print(limpar);
+                  System.out.println("1 - While");
+                  System.out.println("2 - boolean");
+                  System.out.println("3 - Break");
+                  System.out.println(ANSI_RED + "4 - Voltar para a tela de inicio" + ANSI_RESET);
+                  int escolha = entrada.nextInt(); 
+                 
+            if (escolha < 1 || escolha >= 5 ){
+                System.out.println(ANSI_RED + "Item inexistente na lista, favor colocar um número presente na lista acima." + ANSI_RESET);
+                System.out.println("Pressione qualquer letra/número para que possamos continuar");
+                @SuppressWarnings("unused")
+                char lista1 = entrada.next().charAt(0);
+                restart = true;
+            }
+            
+            switch (escolha){ 
+            case 1:
                 System.out.print(limpar);
                 System.out.println(ANSI_BLUE + "1-) While" + ANSI_RESET);
                 System.out.println("");
@@ -50,15 +57,12 @@ public class whiletest {
                 System.out.println("Falta colocar o link de redirecionamento aqui:");
                 System.out.println("Deseja continuar para a próxima explicaçao? (s/n)");
                 String next = entrada.next();
-                if (next.equalsIgnoreCase("s")){
-                    condição1 = true; 
-                } else {
-                    restart = true;
-                }    
-            } else  if (escolha == 4){
-                main.main(null);
-            }
-            if(escolha == 2 || condição1 == true){
+                    if(next.equalsIgnoreCase("s")){
+                      System.out.println(limpar);
+                    } else if(next.equalsIgnoreCase("n")){
+                    break;
+                }
+            case 2:
                 System.out.println(limpar);
                 System.out.println(ANSI_BLUE + "2-) Boolean"+ ANSI_RESET);
                 System.out.println("O comando boolean se trata na verdade de uma Variavel e não de um comando própriamente dito, portanto é necessario declará-lo para que possamos executar alguns comandos while");
@@ -75,7 +79,8 @@ public class whiletest {
                 System.out.println("Digite ok para prosseguir");
                 @SuppressWarnings("unused")
                 char digito = entrada.next().charAt(0);
-                //exemplos
+                
+                //exemplos: 
                 System.out.println(limpar + ANSI_GREEN);
                 System.out.println("boolean temCafe = true;"); System.out.println("boolean temLeite = false;"); System.out.println("if (temCafe && temLeite){"); System.out.println("Pode servir café com leite!"); System.out.println("} else {"); System.out.println("System.out.println('Falta café, leite ou ambos!')"); System.out.println("}"); 
                 System.out.println(ANSI_RESET + "");
@@ -88,13 +93,12 @@ public class whiletest {
                 System.out.println(ANSI_RESET + "");
                 System.out.println("Deseja prosseguir para a próxima página? (s/n)");
                 String next2 = entrada.next();
-                     if (next2.equalsIgnoreCase("s")){
-                    condição2 = true; 
-                } else {
-                    restart = true;
-                }    
-
-            } if (escolha == 3 || condição2 == true){
+                if(next2.equalsIgnoreCase("s")){
+                    System.out.println(limpar);
+                } else if(next2.equalsIgnoreCase("n")){
+                    break;
+                }
+            case 3:
                 System.out.println(limpar);
                 System.out.println(ANSI_BLUE + "3-) Break;" + ANSI_RESET);
                 System.out.println("Dentro de um loop: Quando o comando break é encontrado dentro de um loop (for, while ou do-while), ele interrompe imediatamente a execuçao do loop e o controle do programa passa para a próxima instruçao após o loop.");
@@ -103,28 +107,26 @@ public class whiletest {
                 System.out.println(""+ ANSI_RESET); 
                 System.out.println("Este foi um exemplo de código utilizando o comando while e aqui está um exemplo utilizando o switch case: ");
                 System.out.println("dê ok para o próximo exemplo");
-                @SuppressWarnings("unused") char digitoss = entrada.next().charAt(0);
+                    @SuppressWarnings("unused") char digitoss = entrada.next().charAt(0);
                 System.out.println(ANSI_GREEN + "");
                 System.out.println("        int opcao = 2;");  System.out.println("        switch (opcao) {"); System.out.println("            case 1:"); System.out.println("                System.out.println(\"Opção 1 selecionada.\");"); System.out.println("                break;"); System.out.println("            case 2:"); System.out.println("                System.out.println(\"Opção 2 selecionada.\");"); System.out.println("                break;"); System.out.println("            case 3:"); System.out.println("                System.out.println(\"Opção 3 selecionada.\");"); System.out.println("                break;"); System.out.println("            default:"); System.out.println("                System.out.println(\"Opção inválida.\");"); System.out.println("                break;"); System.out.println("        }");
                 System.out.println( ANSI_RESET + "");
                 System.out.println( "Para prosseguir clique em qualquer tecla: ");
                     @SuppressWarnings("unused")
                     char DIgito = entrada.next().charAt(0);
-                restart = true;
-            } 
-             if (escolha < 1 || escolha >= 5 ){
-                System.out.println(ANSI_RED + "Item inexistente na lista, favor colocar um número presente na lista acima." + ANSI_RESET);
-                System.out.println("Pressione qualquer letra/número para que possamos continuar");
-                @SuppressWarnings("unused")
-                char lista1 = entrada.next().charAt(0);
-                restart = true;
+                break; 
+            case 4: 
+            Main.main(null);
             }
-
         } else if (list.equalsIgnoreCase("n")){
-            main.main(null);
+            Main.main(null);
         } else {
-            main.main(null);
+            System.out.println("Você digitou um algarismo ou elemento não correspondente.");
+            @SuppressWarnings("unused")
+            char z = entrada.next().charAt(0);
+            Main.main(null);
         }
-    } entrada.close();
-  } 
- }
+       } entrada.close();
+     } 
+   }
+  

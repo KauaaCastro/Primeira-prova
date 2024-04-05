@@ -38,7 +38,7 @@ public class sinais_calculos {
                 if(y.equalsIgnoreCase("s")){
                     return; //restart para sinais
                 } else {
-                    main.main(null); //restart para inicio 
+                    Main.main(null); //restart para inicio 
                 }
                 } else if(x == 2){
                     System.out.print("\033\143");
@@ -68,7 +68,7 @@ public class sinais_calculos {
                     if(y.equalsIgnoreCase("s")){
                         return; //restart para sinais
                     } else {
-                        main.main(null); //restart para inicio 
+                        Main.main(null); //restart para inicio 
                     }
                 } else  if(x == 3){
                     System.out.print("\033\143");
@@ -89,7 +89,7 @@ public class sinais_calculos {
                        if(y.equalsIgnoreCase("s")){
                         return; //restart para sinais
                        } else {
-                        main.main(null); //restart para inicio 
+                        Main.main(null); //restart para inicio 
                     }
                 } else if(x == 4){
                     System.out.print("\033\143");
@@ -110,7 +110,7 @@ public class sinais_calculos {
                        if(y.equalsIgnoreCase("s")){
                         return; //restart para sinais
                        } else {
-                        main.main(null); //restart para inicio 
+                        Main.main(null); //restart para inicio 
                 } 
             } else if(x == 5) {
                 System.out.print("\033\143");
@@ -145,10 +145,10 @@ public class sinais_calculos {
                      if(y.equalsIgnoreCase("s")){
                       return; //restart para sinais
                      } else {
-                      main.main(null); //restart para inicio 
+                        Main.main(null); //restart para inicio 
               } 
                 } else if(x == 10){
-                        main.main(null); //restart para inicio 
+                    Main.main(null); //restart para inicio 
                     } entrada.close();
                 }  
             }   
