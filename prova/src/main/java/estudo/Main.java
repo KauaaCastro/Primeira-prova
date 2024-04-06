@@ -6,7 +6,7 @@ public class Main {
   public static final String ANSI_RESET = "\u001B[0m";
   public static final String ANSI_BLUE = "\u001B[34m";
   public static final String ANSI_RED = "\u001B[31m";
-  public static void main(String[] args) {  
+  public static void main(String[] args) throws InterruptedException {  
         Scanner entrada = new Scanner(System.in);
         boolean start = true;
         boolean variaveis = true;
@@ -21,10 +21,10 @@ public class Main {
         System.out.println("2- Sinais e calculos");
         System.out.println("3- If e Else");
         System.out.println("4- While");
-        System.out.println("5- For");
+        System.out.println("5- Switch");
         System.out.println("6- Split");
         System.out.println("7- length");
-        System.out.println("8- Scanner");
+        System.out.println("8- for");
         System.out.println("9- Estrutura básica e padrao");
         System.out.println("10- Loop");
         int escolha = entrada.nextInt();
@@ -139,18 +139,24 @@ public class Main {
             } else if (variavel == 5){
              break;
             }
-        } //sinais e calculos
+        } 
         else if(escolha == 2){
           sinais_calculos opção2 = new sinais_calculos();
             opção2.contas(); 
-              } 
-              //if e else
-              else if (escolha == 3){ 
+        } else if (escolha == 3){ 
                 if_else opção3 = new if_else();
                 opção3.ifelse();
-              } else if(escolha == 4){
+        } else if(escolha == 4){
                 whiletest.voidwhile(args);            
-              }
+        } else if(escolha == 5){
+                SwitchCase.SCase(args);
+        } else {
+          System.out.println(ANSI_RED + "Error" );
+          System.out.println("Digite um número que esteja presente na lista." + ANSI_RESET);
+          Thread.sleep(3000);
+         Main.main(null);
+        }
+
            } entrada.close();
       }  
        

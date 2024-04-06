@@ -6,7 +6,7 @@ public class whiletest {
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_BLUE = "\u001B[34m";
     public static final String ANSI_RED = "\u001B[31m";
-    public static void voidwhile(String [] args){
+    public static void voidwhile(String [] args) throws InterruptedException{
         Scanner entrada = new Scanner(System.in);
         boolean restart = true;
         String limpar = "\033\143";
