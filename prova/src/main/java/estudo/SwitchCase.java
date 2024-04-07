@@ -46,10 +46,10 @@ public class SwitchCase {
            System.out.println(""); 
            System.out.println(ANSI_BLUE + "Usar if e else quando:" + ANSI_RESET );
            System.out.println(""); 
-           System.out.println("1. Condiçoes complexas.");
-           System.out.println("2. Verificaçoo de intervalos.");
-           System.out.println("3. Múltiplas condiçoes independentes.");
-           System.out.println("4. Comparaçao de strings.");
+           System.out.println("1. Situaçoes complexas.");
+           System.out.println("2. Avaliaçao de Condiçoes Simples:");
+           System.out.println("3. Múltiplos Casos Exclusivos:");
+           System.out.println("4. Flexibilidade para Aninhar Condiçoes:");
            System.out.println("5. Ir direto para switch case");
            System.out.println();         
            System.out.println( ANSI_RED + "10. retornar ao menu inicial" + ANSI_RESET);
@@ -58,7 +58,7 @@ public class SwitchCase {
            switch (caso) {
             case 1:
             System.out.println(clear);
-                 System.out.println(ANSI_BLUE + "1. Condiçoes complexas:" + ANSI_RESET);
+                 System.out.println(ANSI_BLUE + "1. Situaçoes complexas:" + ANSI_RESET);
                  System.out.println("");
                  System.out.println("O uso de 'if' e 'else' é especialmente útil quando lidamos com condiçoes complexas.");
                  System.out.println("Em situaçoes onde as condiçoes envolvem múltiplos critérios e expressoes booleanas compostas,");
@@ -85,32 +85,20 @@ public class SwitchCase {
                     }
             case 2:
             System.out.println(clear);
-                 System.out.println( "2. Comparação de valores de enumerações:");
-                 System.out.println("");
-                 System.out.println("O 'switch-case' é frequentemente usado quando precisamos comparar valores de enumerações.");
-                 System.out.println("Enumerações são tipos de dados especiais em Java que representam um conjunto fixo de constantes.");
-                 System.out.println("Usando 'switch-case' com enumerações, podemos lidar com diferentes casos para cada constante da enumeração.");
-                 System.out.println("Por exemplo, considere uma enumeração para dias da semana:");
+                 System.out.println( ANSI_BLUE + "2. Avaliaçao de Condiçoes Simples:" + ANSI_RESET);
+                 System.out.println("O if-else é frequentemente usado quando precisamos avaliar uma condiçao booleana simples.");
+                 System.out.println("Isso pode ser tao simples quanto verificar se um número é positivo ou negativo,");
+                 System.out.println("se uma variável é nula ou nao, ou se uma condiçao específica é verdadeira.");
+                 System.out.println("Exemplo: Verificaçao se um número é positivo:");
+                 System.out.println(ANSI_GREEN);
+                 System.out.println("int numero = 10;");
+                 System.out.println("if (numero > 0) {");
+                 System.out.println("    System.out.println(\"O número é positivo.\");");
+                 System.out.println("} else {");
+                 System.out.println("    System.out.println(\"O número é negativo ou zero.\");");
+                 System.out.println("}");                 
+                 System.out.println(ANSI_RESET);
                  System.out.println();
-                 System.out.println("enum DiaDaSemana {");
-                 System.out.println("    DOMINGO, SEGUNDA, TERÇA, QUARTA, QUINTA, SEXTA, SÁBADO");
-                 System.out.println("}");
-                 System.out.println();
-                 System.out.println("switch (dia) {");
-                 System.out.println("    case DOMINGO:");
-                 System.out.println("        System.out.println(\"Hoje é domingo.\");");
-                 System.out.println("        break;");
-                 System.out.println("    case SEGUNDA:");
-                 System.out.println("        System.out.println(\"Hoje é segunda-feira.\");");
-                 System.out.println("        break;");
-                 System.out.println("    // Casos restantes para os outros dias da semana...");
-                 System.out.println("}");
-                 System.out.println();
-                 System.out.println("Neste exemplo, estamos usando 'switch-case' para lidar com diferentes dias da semana,");
-                 System.out.println("usando os valores da enumeração DiaDaSemana. Isso nos permite escrever um código mais");
-                 System.out.println("limpo e organizado, especialmente quando estamos lidando com várias opções.");
-                 System.out.println();
-                 System.out.println("");
                  System.out.println("podemos continuar? (s/n)");
                  String continuar1 = entrada.next();
                     if(continuar1.equalsIgnoreCase("n")){
@@ -121,15 +109,21 @@ public class SwitchCase {
                     }
             case 3:
             System.out.println(clear);
-                 System.out.println("3. Clareza de código:");
-                 System.out.println("");
-                 System.out.println("Tanto 'if-else' quanto 'switch-case' podem ser usados para expressar lógica condicional,");
-                 System.out.println("mas a escolha entre eles muitas vezes depende da clareza do código.");
-                 System.out.println("Se a lógica condicional envolve múltiplas opções com base em uma única variável, 'switch-case'");
-                 System.out.println("pode tornar o código mais claro e legível.");
-                 System.out.println("Por outro lado, 'if-else' é mais adequado para condições complexas ou quando as condições são independentes umas das outras.");
-                 System.out.println("Ao decidir entre 'if-else' e 'switch-case', é importante priorizar a clareza e a facilidade de manutenção do código.");
-                 System.out.println("");
+                 System.out.println(ANSI_BLUE + "3. Múltiplos Casos Exclusivos:" + ANSI_RESET);
+                 System.out.println();
+                 System.out.println("O if-else é útil quando precisamos lidar com múltiplos casos exclusivos e independentes uns dos outros.");
+                 System.out.println("Cada bloco if-else pode lidar com um caso separado, fornecendo uma maneira clara de tratar diferentes situaçoes.");
+                 System.out.println("Exemplo: Determinaçao do período do dia com base na hora:");
+                 System.out.println(ANSI_GREEN);
+                 System.out.println("int hora = 15;");
+                 System.out.println("if (hora >= 6 && hora < 12) {");
+                 System.out.println("    System.out.println(\"Bom dia!\");");
+                 System.out.println("} else if (hora >= 12 && hora < 18) {");
+                 System.out.println("    System.out.println(\"Boa tarde!\");");
+                 System.out.println("} else {");
+                 System.out.println("    System.out.println(\"Boa noite!\");");
+                 System.out.println("}");
+                 System.out.println(ANSI_RESET);
                  System.out.println("podemos continuar? (s/n)");
                  String continuar2 = entrada.next();
                     if(continuar2.equalsIgnoreCase("n")){
@@ -140,49 +134,71 @@ public class SwitchCase {
                     }
             case 4:
                  System.out.println(clear);
-                 System.out.println("4. Melhor desempenho:");
+                 System.out.println(ANSI_BLUE + "4. Flexibilidade para Aninhar Condiçoes:" + ANSI_RESET);
                  System.out.println("");
-                 System.out.println("Em algumas situações, 'switch-case' pode oferecer melhor desempenho do que 'if-else'.");
-                 System.out.println("Isso ocorre porque o compilador Java pode otimizar um 'switch-case' para uma instrução de desvio de múltiplas vias,");
-                 System.out.println("que pode ser mais eficiente do que uma série de 'if-else' aninhados.");
-                 System.out.println("No entanto, é importante lembrar que otimizações de desempenho podem variar dependendo do contexto e da implementação do compilador.");
-                 System.out.println("Ao avaliar o desempenho, é recomendável fazer testes de benchmarking para determinar qual abordagem é mais adequada para sua situação específica.");
-                 System.out.println("");
+                 System.out.println("if-else oferece flexibilidade para aninhar várias condiçoes e declaraçoes, permitindo uma lógica de controle de fluxo mais elaborada.");
+                 System.out.println("Isso é útil quando precisamos lidar com situaçoes mais complexas que requerem mais do que uma simples correspondência de valor.");
+                 System.out.println("Exemplo: Determinaçao do preço de um produto com base na categoria e desconto do cliente:");
+                 System.out.println(ANSI_GREEN);
+                 System.out.println("String categoria = \"eletrônicos\";");
+                 System.out.println("double preco = 1000.0;");
+                 System.out.println("boolean temDesconto = true;");
+                 System.out.println();
+                 System.out.println("if (categoria.equals(\"alimentos\")) {");
+                 System.out.println("    if (temDesconto) {");
+                 System.out.println("        preco *= 0.9; // Aplica desconto de 10% para alimentos com desconto");
+                 System.out.println("    }");
+                 System.out.println("} else if (categoria.equals(\"eletrônicos\")) {");
+                 System.out.println("    if (temDesconto) {");
+                 System.out.println("        preco *= 0.8; // Aplica desconto de 20% para eletrônicos com desconto");
+                 System.out.println("    }");
+                 System.out.println("} else {");
+                 System.out.println("    // Outras categorias nao têm desconto");
+                 System.out.println("}");
+                 System.out.println("System.out.println(\"Preço final: \" + preco);");
+                 System.out.println("Esses exemplos ilustram as diversas situaçoes em que o if-else é uma escolha adequada,");
+                 System.out.println("proporcionando flexibilidade, clareza e capacidade de lidar com lógica condicional complexa");
+                 System.out.println("em seus programas Java.");
+                 System.out.println(ANSI_RESET);
                  System.out.println("Pressione qualquer tecla para que possamos retornar a lista e selecionar outros itens caso deseje:");
                  @SuppressWarnings("unused")
                  char retornando = entrada.next().charAt(0);    
-               
+                 //segunda lista, lista com Switch case Z
+
+            case 10:
+            Main.main(null);
+
             } switch (caso){
                 case 5:
                 while(lista2){
-                System.out.println("");
+                     System.out.println();
                      System.out.println( ANSI_BLUE + "Usar o switch case quando:" + ANSI_RESET);
-                     System.out.println("Use switch-case quando:");
                      System.out.println("1. Múltiplas opçoes com base em um valor fixo.");
                      System.out.println("2. Comparaçao de valores de enumeraçoes.");
                      System.out.println("3. Clareza de código.");
                      System.out.println("4. Melhor desempenho.");
+                     System.out.println();
                      System.out.println("5. Retornar a lista anterior");
-                     System.out.println("10. Retornar para a tela de inicio");
+                     System.out.println(ANSI_RED + "10. Retornar para a tela de inicio" + ANSI_RED);
                      int casoS = entrada.nextInt();
                      if(casoS >=1 && casoS <= 5 || casoS ==10){
                      switch (casoS) {
                        case 1:
                        System.out.println("");
                        System.out.println(clear);
-                           System.out.println("1. Múltiplas opções com base em um valor fixo:");
-                           System.out.println("O 'switch-case' é particularmente útil quando você precisa lidar com múltiplas opções,");
+                           System.out.println(ANSI_BLUE+ "1. Múltiplas opçoes com base em um valor fixo:" + ANSI_RESET);
+                           System.out.println("O 'switch-case' é particularmente útil quando você precisa lidar com múltiplas opçoes,");
                            System.out.println("cada uma correspondendo a um valor específico e fixo.");
                            System.out.println("Ele oferece uma maneira concisa e legível de expressar lógica condicional quando há várias");
-                           System.out.println("ramificações com base em um único valor.");
+                           System.out.println("ramificaçoes com base em um único valor.");
                            System.out.println("Por exemplo, podemos usar 'switch-case' para lidar com diferentes tipos de transporte:");
-                           System.out.println();
+                           System.out.println(ANSI_GREEN);
                            System.out.println("switch (tipoDeTransporte) {");
                            System.out.println("    case CARRO:");
                            System.out.println("        System.out.println(\"Você está dirigindo um carro.\");");
                            System.out.println("        break;");
                            System.out.println("    case AVIAO:");
-                           System.out.println("        System.out.println(\"Você está voando em um avião.\");");
+                           System.out.println("        System.out.println(\"Você está voando em um aviao.\");");
                            System.out.println("        break;");
                            System.out.println("    case TREM:");
                            System.out.println("        System.out.println(\"Você está viajando de trem.\");");
@@ -190,10 +206,10 @@ public class SwitchCase {
                            System.out.println("    default:");
                            System.out.println("        System.out.println(\"Tipo de transporte desconhecido.\");");
                            System.out.println("}");
-                           System.out.println();
+                           System.out.println(ANSI_RESET);
                            System.out.println("Neste exemplo, estamos usando 'switch-case' para lidar com diferentes tipos de transporte,");
-                           System.out.println("usando os valores fixos definidos pela enumeração TipoDeTransporte. Isso torna o código");
-                           System.out.println("mais claro e organizado, especialmente quando temos várias opções.");
+                           System.out.println("usando os valores fixos definidos pela enumeraçao TipoDeTransporte. Isso torna o código");
+                           System.out.println("mais claro e organizado, especialmente quando temos várias opçoes.");
                            System.out.println("");
                            System.out.println("podemos continuar? (s/n)");
                            String continuars1 = entrada.next();
@@ -210,13 +226,13 @@ public class SwitchCase {
                         case 2:
                         System.out.println("");
                         System.out.println(clear);
-                            System.out.println("2. Comparação de valores de enumerações:");
+                            System.out.println( ANSI_BLUE + "2. Comparaçao de valores de enumeraçoes:" + ANSI_RESET);
                         System.out.println("");                            
-                             System.out.println("O 'switch-case' é frequentemente usado quando precisamos comparar valores de enumerações.");
-                             System.out.println("Enumerações são tipos de dados especiais em Java que representam um conjunto fixo de constantes.");
-                             System.out.println("Usando 'switch-case' com enumerações, podemos lidar com diferentes casos para cada constante da enumeração.");
-                             System.out.println("Por exemplo, considere uma enumeração para dias da semana:");
-                             System.out.println();
+                             System.out.println("O 'switch-case' é frequentemente usado quando precisamos comparar valores de enumeraçoes.");
+                             System.out.println("Enumeraçoes sao tipos de dados especiais em Java que representam um conjunto fixo de constantes.");
+                             System.out.println("Usando 'switch-case' com enumeraçoes, podemos lidar com diferentes casos para cada constante da enumeraçao.");
+                             System.out.println("Por exemplo, considere uma enumeraçao para dias da semana:");
+                             System.out.println(ANSI_GREEN);
                              System.out.println("enum DiaDaSemana {");
                              System.out.println("    DOMINGO, SEGUNDA, TERÇA, QUARTA, QUINTA, SEXTA, SÁBADO");
                              System.out.println("}");
@@ -230,10 +246,10 @@ public class SwitchCase {
                              System.out.println("        break;");
                              System.out.println("    // Casos restantes para os outros dias da semana...");
                              System.out.println("}");
-                             System.out.println();
+                             System.out.println(ANSI_RESET);
                              System.out.println("Neste exemplo, estamos usando 'switch-case' para lidar com diferentes dias da semana,");
-                             System.out.println("usando os valores da enumeração DiaDaSemana. Isso nos permite escrever um código mais");
-                             System.out.println("limpo e organizado, especialmente quando estamos lidando com várias opções.");
+                             System.out.println("usando os valores da enumeraçao DiaDaSemana. Isso nos permite escrever um código mais");
+                             System.out.println("limpo e organizado, especialmente quando estamos lidando com várias opçoes.");
                              System.out.println("");
                              System.out.println("podemos continuar? (s/n)");
                              String continuar2 = entrada.next();
@@ -243,19 +259,20 @@ public class SwitchCase {
                             System.out.println(clear);
                             break;                                
                             } else {
+                              System.out.println(clear);
                                System.out.println(ANSI_RED + "ERRO, REINICIANDO TERMINAL" + ANSI_RESET);
                                Thread.sleep(3000);
                                Main.main(null);
                             }
                         case 3: 
                         System.out.println(clear);
-                             System.out.println("3. Clareza de código:");
+                             System.out.println( ANSI_BLUE + "3. Clareza de código:" + ANSI_RESET);
                              System.out.println("Tanto 'if-else' quanto 'switch-case' podem ser usados para expressar lógica condicional,");
                              System.out.println("mas a escolha entre eles muitas vezes depende da clareza do código.");
-                             System.out.println("Se a lógica condicional envolve múltiplas opções com base em uma única variável, 'switch-case'");
+                             System.out.println("Se a lógica condicional envolve múltiplas opçoes com base em uma única variável, 'switch-case'");
                              System.out.println("pode tornar o código mais claro e legível.");
-                             System.out.println("Por outro lado, 'if-else' é mais adequado para condições complexas ou quando as condições são independentes umas das outras.");
-                             System.out.println("Ao decidir entre 'if-else' e 'switch-case', é importante priorizar a clareza e a facilidade de manutenção do código.");
+                             System.out.println("Por outro lado, 'if-else' é mais adequado para condiçoes complexas ou quando as condiçoes sao independentes umas das outras.");
+                             System.out.println("Ao decidir entre 'if-else' e 'switch-case', é importante priorizar a clareza e a facilidade de manutençao do código.");
                              System.out.println("Podemos continuar? (s/n)");
                              String continuar3 = entrada.next();
                              if(continuar3.equalsIgnoreCase("s")){
@@ -270,12 +287,12 @@ public class SwitchCase {
                              }
                         case 4: 
                         System.out.println(clear);
-                             System.out.println("4. Melhor desempenho:");
-                             System.out.println("Em algumas situações, 'switch-case' pode oferecer melhor desempenho do que 'if-else'.");
-                             System.out.println("Isso ocorre porque o compilador Java pode otimizar um 'switch-case' para uma instrução de desvio de múltiplas vias,");
+                             System.out.println(ANSI_BLUE + "4. Melhor desempenho:" + ANSI_RESET);
+                             System.out.println("Em algumas situaçoes, 'switch-case' pode oferecer melhor desempenho do que 'if-else'.");
+                             System.out.println("Isso ocorre porque o compilador Java pode otimizar um 'switch-case' para uma instruçao de desvio de múltiplas vias,");
                              System.out.println("que pode ser mais eficiente do que uma série de 'if-else' aninhados.");
-                             System.out.println("No entanto, é importante lembrar que otimizações de desempenho podem variar dependendo do contexto e da implementação do compilador.");
-                             System.out.println("Ao avaliar o desempenho, é recomendável fazer testes de benchmarking para determinar qual abordagem é mais adequada para sua situação específica.");
+                             System.out.println("No entanto, é importante lembrar que otimizaçoes de desempenho podem variar dependendo do contexto e da implementaçao do compilador.");
+                             System.out.println("Ao avaliar o desempenho, é recomendável fazer testes de benchmarking para determinar qual abordagem é mais adequada para sua situaçao específica.");
                              System.out.println("Podemos continuar? (s/n)");
                              String continuar4 = entrada.next();
                              if(continuar4.equalsIgnoreCase("s")){
@@ -285,7 +302,7 @@ public class SwitchCase {
                                 System.out.println(clear);
                                 break;
                              } else {
-                              System.out.println("");
+                              System.out.println(clear);
                                 System.out.println(ANSI_RED + "ERRO, REINICIANDO TERMINAL" + ANSI_RESET);
                                 Thread.sleep(3000);
                                 Main.main(null);
@@ -296,6 +313,7 @@ public class SwitchCase {
                         Main.main(null);
                     } 
                  } else {
+                  System.out.println(clear);
                   System.out.println(ANSI_RED + "ERRO, REINICIANDO PROGRAMA..." + ANSI_RESET);
                   Thread.sleep(3000);
                   Main.main(null);
@@ -305,7 +323,7 @@ public class SwitchCase {
      } else {
       Main.main(null);
 }
-}
+} entrada.close();
     }
    }
 
