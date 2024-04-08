@@ -7,7 +7,7 @@ public class if_else {
     public static final String ANSI_BLUE = "\u001B[34m";
     public static final String ANSI_RED = "\u001B[31m";
     
-    public void ifelse() throws InterruptedException{
+    public static void ifelse(String[] args) throws InterruptedException{
         Scanner entrada = new Scanner(System.in);
         boolean restart = true;
 

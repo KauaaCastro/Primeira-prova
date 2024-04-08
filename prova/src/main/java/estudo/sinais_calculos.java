@@ -8,7 +8,7 @@ public class sinais_calculos {
     public static final String ANSI_BLUE = "\u001B[34m";
     public static final String ANSI_RED = "\u001B[31m";
     
-    public void contas() throws InterruptedException{
+    public static void contas(String[] args) throws InterruptedException{
             Scanner entrada = new Scanner(System.in);
             boolean sinais = true;
 
