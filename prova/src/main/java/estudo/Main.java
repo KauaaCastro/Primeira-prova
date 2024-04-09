@@ -22,9 +22,8 @@ public class Main {
         System.out.println("4- While");
         System.out.println("5- Switch");
         System.out.println("6- Split");
-        System.out.println("7- length");
-        System.out.println("8- for");
-        System.out.println("9- Estrutura básica e padrao");
+        System.out.println("7- for");
+        System.out.println("8- Estrutura básica e padrao");
         System.out.println("10- Extra ");
         int escolha = entrada.nextInt();
         
@@ -38,6 +37,8 @@ public class Main {
           whiletest.voidwhile(args);            
         } else if(escolha == 5){
           SwitchCase.SCase(args);
+        } else if (escolha == 6){
+          Split.strsplit(args);
         } else {
           System.out.println(ANSI_RED + "Error" );
           System.out.println("Digite um número que esteja presente na lista." + ANSI_RESET);

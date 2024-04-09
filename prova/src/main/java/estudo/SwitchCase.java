@@ -50,8 +50,8 @@ public class SwitchCase {
            System.out.println("2. Avaliaçao de Condiçoes Simples:");
            System.out.println("3. Múltiplos Casos Exclusivos:");
            System.out.println("4. Flexibilidade para Aninhar Condiçoes:");
-           System.out.println("5. Ir direto para switch case");
            System.out.println();         
+           System.out.println("5. Ir direto para switch case");
            System.out.println( ANSI_RED + "10. retornar ao menu inicial" + ANSI_RESET);
            int caso = entrada.nextInt();
 
