@@ -39,7 +39,10 @@ public class Main {
           SwitchCase.SCase(args);
         } else if (escolha == 6){
           Split.strsplit(args);
-        } else {
+        } else if (escolha == 7){
+          comandoFor.Forcode(args);
+        }
+          else {
           System.out.println(ANSI_RED + "Error" );
           System.out.println("Digite um número que esteja presente na lista." + ANSI_RESET);
           Thread.sleep(3000);
