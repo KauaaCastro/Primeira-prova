@@ -54,7 +54,7 @@ public class Main {
          Main.main(null);
         }
 
-           } //entrada.close();
+           } entrada.close();
       }  
        
     }
