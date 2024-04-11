@@ -16,40 +16,45 @@ public class Main {
         System.out.println("Escolha aqui qual matéria você deseja revisar" );
         System.out.println("");
         
-        System.out.println("1- Váriaveis");
-        System.out.println("2- Sinais e calculos");
-        System.out.println("3- If e Else");
-        System.out.println("4- While");
-        System.out.println("5- Switch");
-        System.out.println("6- Split");
-        System.out.println("7- for");
-        System.out.println("8- Estrutura básica e padrao");
-        System.out.println("10- Extra ");
+        System.out.println("1- Estrutura básica e padrao");
+        System.out.println("2- Váriaveis");
+        System.out.println("3- Sinais e calculos");
+        System.out.println("4- If e Else");
+        System.out.println("5- While");
+        System.out.println("6- Switch");
+        System.out.println("7- Split");
+        System.out.println("8- for");
+        System.out.println("10- finalizar ");
         int escolha = entrada.nextInt();
-        
+
         if(escolha == 1){
+          Basico.basic(args);
+        } else if(escolha == 2){
           Variavel.variaveis(args);
-        }else if(escolha == 2){
+        }else if(escolha == 3){
           sinais_calculos.contas(args);
-        } else if (escolha == 3){ 
+        } else if (escolha == 4){ 
           if_else.ifelse(args);
-        } else if(escolha == 4){
-          whiletest.voidwhile(args);            
         } else if(escolha == 5){
+          whiletest.voidwhile(args);            
+        } else if(escolha == 6){
           SwitchCase.SCase(args);
-        } else if (escolha == 6){
-          Split.strsplit(args);
         } else if (escolha == 7){
+          Split.strsplit(args);
+        } else if (escolha == 8){
           comandoFor.Forcode(args);
-        }
-          else {
+        } else if (escolha == 10){
+          System.out.println();
+          System.out.println("Encerrando, obrigado por utilizar o App...");
+          start = false;
+        } else {
           System.out.println(ANSI_RED + "Error" );
           System.out.println("Digite um número que esteja presente na lista." + ANSI_RESET);
           Thread.sleep(3000);
          Main.main(null);
         }
 
-           } entrada.close();
+           } //entrada.close();
       }  
        
     }
